@@ -1,52 +1,122 @@
 
 body {
-  background-color: #111;
-  color: #eee;
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
+  background: #0e0e0e;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
 }
-header, section, footer {
-  padding: 1em;
-  max-width: 800px;
-  margin: auto;
+
+header.hero {
+  background: url('https://images.unsplash.com/photo-1597007731502-3b6d93df75dd') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-h1, h2, h3 {
-  color: #ccc;
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+  border-radius: 10px;
 }
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
 .cta {
   display: inline-block;
-  padding: 0.5em 1em;
-  background: #666;
-  color: #fff;
-  text-decoration: none;
   margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background: #999;
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
+
+.dark-header {
+  background: #222;
+  padding: 2em;
+  text-align: center;
 }
-td, th {
-  border: 1px solid #333;
-  padding: 0.5em;
-}
-form {
-  max-width: 600px;
+
+section.about, section.services, .form-section {
+  padding: 2em;
+  max-width: 900px;
   margin: auto;
+}
+
+.service-grid {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.service-card {
+  background: #1a1a1a;
+  padding: 1em;
+  border: 1px solid #444;
+  width: 250px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0.5em 0;
+  padding-left: 1em;
+  position: relative;
+}
+
+ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ccc;
+}
+
+form {
   display: flex;
   flex-direction: column;
 }
+
 input, textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: none;
   background: #222;
-  color: #fff;
-}
-button {
+  color: #eee;
+  border: 1px solid #555;
   padding: 0.75em;
-  background: #444;
-  color: white;
+  margin-bottom: 1em;
+  border-radius: 4px;
+}
+
+button {
+  background: #999;
+  color: #111;
+  padding: 1em;
   border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: #111;
+  color: #666;
+  font-size: 0.9em;
 }
