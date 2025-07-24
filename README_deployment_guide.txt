@@ -1,0 +1,1 @@
+This is a placeholder for README_deployment_guide.txt in the Dad's Garage launch kit.
