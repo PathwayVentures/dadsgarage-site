@@ -1,122 +1,61 @@
 
 body {
   margin: 0;
-  padding: 0;
-  background: #0e0e0e;
+  font-family: 'Barlow Condensed', sans-serif;
+  background: #0d0d0d;
   color: #e0e0e0;
-  font-family: 'Segoe UI', sans-serif;
 }
-
-header.hero {
-  background: url('https://images.unsplash.com/photo-1597007731502-3b6d93df75dd') no-repeat center center;
+.hero {
+  background: url('https://images.unsplash.com/photo-1622737139923-10a0fd2aa8f1?auto=format&fit=crop&w=1450&q=80') no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0,0,0,0.75);
   padding: 2em;
-  border-radius: 10px;
+  border-radius: 8px;
 }
-
-header h1 {
-  font-size: 3em;
-  margin: 0;
+.hero h1 {
+  font-size: 3.2em;
+  margin: 0 0 0.25em 0;
+  color: #f0f0f0;
 }
-
-header p {
-  font-size: 1.2em;
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 1em;
 }
-
 .cta {
   display: inline-block;
-  margin-top: 1em;
+  background: #c0c0c0;
+  color: #111;
   padding: 0.75em 1.5em;
-  background: #999;
-  color: #111;
-  font-weight: bold;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
-}
-
-.dark-header {
-  background: #222;
-  padding: 2em;
-  text-align: center;
-}
-
-section.about, section.services, .form-section {
-  padding: 2em;
-  max-width: 900px;
-  margin: auto;
-}
-
-.service-grid {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 2em;
-}
-
-.service-card {
-  background: #1a1a1a;
-  padding: 1em;
-  border: 1px solid #444;
-  width: 250px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 0.5em 0;
-  padding-left: 1em;
-  position: relative;
-}
-
-ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #ccc;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input, textarea {
-  background: #222;
-  color: #eee;
-  border: 1px solid #555;
-  padding: 0.75em;
-  margin-bottom: 1em;
-  border-radius: 4px;
-}
-
-button {
-  background: #999;
-  color: #111;
-  padding: 1em;
-  border: none;
-  border-radius: 5px;
   font-weight: bold;
 }
-
+.about, .highlight {
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+.highlight {
+  background: #1a1a1a;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
 footer {
   text-align: center;
-  padding: 1.5em;
+  padding: 2em 1em;
   background: #111;
-  color: #666;
-  font-size: 0.9em;
+  color: #777;
+}
+footer a {
+  color: #aaa;
+  text-decoration: none;
 }
