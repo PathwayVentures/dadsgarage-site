@@ -1,1 +1,24 @@
-This is a placeholder for contact.html in the Dad's Garage launch kit.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Service | Dad's Garage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Request Service</h1>
+    <p>Mobile mechanic service made simple. Fill out the form and I’ll text or email you back.</p>
+  </header>
+  <form action="https://formspree.io/f/mexample" method="POST">
+    <label>Name:<br><input type="text" name="name" required></label><br>
+    <label>Email or Phone:<br><input type="text" name="contact" required></label><br>
+    <label>Vehicle Info (Make, Model, Year):<br><input type="text" name="vehicle" required></label><br>
+    <label>Describe the Issue:<br><textarea name="issue" rows="5" required></textarea></label><br>
+    <button type="submit">Send Request</button>
+  </form>
+  <footer>
+    <p>&copy; 2025 Dad's Garage</p>
+  </footer>
+</body>
+</html>

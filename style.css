@@ -1,1 +1,52 @@
-This is a placeholder for style.css in the Dad's Garage launch kit.
+
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header, section, footer {
+  padding: 1em;
+  max-width: 800px;
+  margin: auto;
+}
+h1, h2, h3 {
+  color: #ccc;
+}
+.cta {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #666;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1em;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #333;
+  padding: 0.5em;
+}
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: none;
+  background: #222;
+  color: #fff;
+}
+button {
+  padding: 0.75em;
+  background: #444;
+  color: white;
+  border: none;
+}
