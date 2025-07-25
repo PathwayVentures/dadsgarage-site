@@ -1,0 +1,8 @@
+/* Simplified styles for preview */
+body { font-family: 'Roboto', sans-serif; background: #1a1a1a; color: #f0f0f0; }
+.section { padding: 2em; }
+nav { background: #000; color: #fff; padding: 1em; }
+.grid { display: flex; flex-wrap: wrap; gap: 1em; }
+.card { background: #2a2a2a; padding: 1em; border-radius: 8px; flex: 1 1 250px; }
+form { display: grid; gap: 1em; background: #2a2a2a; padding: 1em; border-radius: 8px; }
+footer { text-align: center; padding: 1em; background: #111; }
