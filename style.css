@@ -2,8 +2,31 @@
 body {
   margin: 0;
   font-family: 'Barlow Condensed', sans-serif;
-  background-color: #0b0b0b;
+  background: #0e0e0e;
+  color: #f0f0f0;
+}
+.navbar {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links li a {
   color: #eee;
+  text-decoration: none;
+}
+.nav-links li a:hover {
+  color: #f7b500;
 }
 .hero {
   background: url('https://images.unsplash.com/photo-1622737139923-10a0fd2aa8f1?auto=format&fit=crop&w=1450&q=80') no-repeat center center;
@@ -14,116 +37,62 @@ body {
   justify-content: center;
 }
 .overlay {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   text-align: center;
   border-radius: 10px;
 }
-.hero h1 {
-  font-size: 4rem;
-  margin: 0;
-}
-.hero p {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
 .cta {
-  background-color: #c0c0c0;
+  background-color: #f7b500;
   color: #111;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
 }
-.intro, .features {
-  padding: 2rem 1rem;
-  max-width: 1000px;
+.about, .form-section, .services-section, .common-jobs {
+  max-width: 900px;
   margin: auto;
-}
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
-}
-.feature-box {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 280px;
-  text-align: center;
-}
-.feature-box img {
-  width: 64px;
-  margin-bottom: 1rem;
-}
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  background: #111;
-  color: #999;
-}
-
-.dark-header {
-  background-color: #111;
-  text-align: center;
   padding: 2rem 1rem;
-}
-.dark-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
 .services-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
-  padding: 2rem;
+  justify-content: center;
 }
 .service-card {
-  background: #1d1d1d;
-  padding: 1.5rem;
-  border: 1px solid #333;
-  border-radius: 10px;
-  text-align: center;
-  width: 280px;
-}
-.common-jobs {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-.common-jobs ul {
-  list-style: none;
-  padding: 0;
-}
-.common-jobs li {
-  padding: 0.5rem;
-}
-.form-section {
-  max-width: 600px;
-  margin: 2rem auto;
+  background: #1c1c1c;
   padding: 1rem;
+  border: 1px solid #444;
+  border-radius: 10px;
+  width: 260px;
+  text-align: center;
 }
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-input, textarea {
+input, select, textarea {
   background: #222;
   color: #eee;
-  border: 1px solid #444;
+  border: 1px solid #555;
   padding: 0.75rem;
   border-radius: 5px;
 }
 button {
-  background-color: #c0c0c0;
+  background: #f7b500;
   color: #111;
   font-weight: bold;
   padding: 1rem;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #111;
+  color: #999;
+  font-size: 0.9rem;
 }
