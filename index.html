@@ -1,35 +1,44 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dad's Garage</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Dad's Garage</h1>
     <p>Mobile Mechanic Service — Columbia, MO</p>
-    <button onclick="document.getElementById('booking').scrollIntoView()">Book a Service</button>
+    <button onclick="document.getElementById('service-form').scrollIntoView({behavior: 'smooth'})">Book a Service</button>
   </header>
 
-  <section id="booking">
-    <h2>Dynamic Booking Form</h2>
-    <form id="service-form">
-      <input name="name" placeholder="Your Name" required><br>
-      <input name="vehicle" placeholder="Vehicle Info" required><br>
-      <input name="phone" placeholder="Phone Number" required><br>
-      <select name="service" required>
-        <option value="">Choose Service</option>
-        <option value="Oil Change">Oil Change</option>
-        <option value="Brake Job">Brake Job</option>
-      </select><br>
-      <input name="datetime" type="datetime-local" required><br>
-      <textarea name="notes" placeholder="Notes"></textarea><br>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+  <main>
+    <section id="booking-form">
+      <h2>Service Request</h2>
+      <form id="service-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="vehicle" placeholder="Vehicle Info" required />
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option value="Spark Plug Job">Spark Plug Job</option>
+          <option value="Brake Job (Front/Rear)">Brake Job (Front/Rear)</option>
+          <option value="Radiator Flush">Radiator Flush</option>
+          <option value="Oil Change">Oil Change</option>
+          <option value="Battery Replacement">Battery Replacement</option>
+          <option value="Starter/Alternator">Starter/Alternator</option>
+        </select>
+        <input type="text" name="oil_type" placeholder="Oil Type (if needed)" />
+        <input type="text" name="part_quality" placeholder="Part Quality" />
+        <input type="datetime-local" name="datetime" placeholder="Preferred Time" />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="notes" placeholder="Additional Notes"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
 
-  <script src="booking.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
