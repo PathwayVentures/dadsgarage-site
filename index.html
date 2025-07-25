@@ -1,166 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dad's Garage - Columbia, MO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #0f0f0f;
-      color: #f0f0f0;
-    }
-    .navbar {
-      background-color: #000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em 2em;
-    }
-    .navbar .logo {
-      font-family: 'Anton', sans-serif;
-      font-size: 1.5rem;
-      color: #ffd700;
-    }
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5em;
-    }
-    .navbar ul li a {
-      text-decoration: none;
-      color: #ccc;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    .navbar ul li a:hover {
-      color: #fff;
-    }
-    .hero {
-      text-align: center;
-      padding: 4em 2em;
-      background-color: #111;
-      color: #fff;
-    }
-    .hero img {
-      max-width: 100%;
-      height: auto;
-    }
-    .cta-btn {
-      background-color: #ffd700;
-      color: #000;
-      padding: 0.75em 1.5em;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 1em;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5em;
-      padding: 2em;
-    }
-    .card {
-      background-color: #1c1c1c;
-      padding: 1em;
-      border-radius: 8px;
-      border: 1px solid #333;
-      text-align: center;
-    }
-    .card h3 {
-      color: #ffd700;
-      margin-top: 0.5em;
-    }
-    section {
-      padding: 3em 2em;
-      border-bottom: 1px solid #333;
-    }
-    h2 {
-      font-family: 'Anton', sans-serif;
-      font-size: 2em;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 1em;
-    }
-    p {
-      line-height: 1.6;
-      color: #ccc;
-      text-align: center;
-    }
-    footer {
-      background-color: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 1em;
-      font-size: 0.9em;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dad's Garage</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Dad's Garage</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#request">Request a Quote</a></li>
-      <li><a href="#emergency">Emergency Info</a></li>
-      <li><a href="#recommendations">Recommendations</a></li>
-      <li><a href="#rewards">Rewards</a></li>
-      <li><a href="#dashboard">Dashboard</a></li>
-    </ul>
-  </nav>
+  <header>
+    <h1>Dad's Garage</h1>
+    <p>Mobile Mechanic Service — Columbia, MO</p>
+    <button onclick="document.getElementById('booking').scrollIntoView()">Book a Service</button>
+  </header>
 
-  <section id="home" class="hero">
-    <img src="assets/header-animated.gif" alt="Dad's Garage Header">
-    <h1>Mobile Mechanic Service — Columbia, MO</h1>
-    <p>No shops. No BS. I come to you.</p>
-    <a href="#request" class="cta-btn">Book a Service</a>
-  </section>
-
-  <section id="services">
-    <h2>Services</h2>
-    <div class="grid">
-      <div class="card"><img src="assets/icon-wrench.svg"><h3>Spark Plug Job</h3><p>Includes boots, grease, gap check.</p></div>
-      <div class="card"><img src="assets/icon-wrench.svg"><h3>Brake Job (Front/Rear)</h3><p>Includes brake cleaner, caliper grease.</p></div>
-      <div class="card"><img src="assets/icon-wrench.svg"><h3>Radiator Flush</h3><p>Includes thermostat replacement.</p></div>
-      <div class="card"><img src="assets/icon-wrench.svg"><h3>Oil Change</h3><p>Conventional or Synthetic. Includes filter check.</p></div>
-      <div class="card"><img src="assets/icon-wrench.svg"><h3>Battery Replacement</h3><p>Test, remove, clean terminals, replace.</p></div>
-      <div class="card"><img src="assets/icon-wrench.svg"><h3>Starter/Alternator</h3><p>Bench test, install, verify output.</p></div>
-    </div>
-  </section>
-
-  <section id="request">
+  <section id="booking">
     <h2>Dynamic Booking Form</h2>
-    <p>Booking form coming soon with dynamic logic...</p>
+    <form id="service-form">
+      <input name="name" placeholder="Your Name" required><br>
+      <input name="vehicle" placeholder="Vehicle Info" required><br>
+      <input name="phone" placeholder="Phone Number" required><br>
+      <select name="service" required>
+        <option value="">Choose Service</option>
+        <option value="Oil Change">Oil Change</option>
+        <option value="Brake Job">Brake Job</option>
+      </select><br>
+      <input name="datetime" type="datetime-local" required><br>
+      <textarea name="notes" placeholder="Notes"></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
-  <section id="emergency">
-    <h2>After Hours / Emergency Info</h2>
-    <p>Contact: (918) 998-7106 | $50 surcharge applies</p>
-  </section>
-
-  <section id="recommendations">
-    <h2>Recommendations</h2>
-    <p>Tips based on your mileage, usage, and prior service.</p>
-  </section>
-
-  <section id="rewards">
-    <h2>Rewards</h2>
-    <p>Free oil change after 5 visits or $500 spent.</p>
-  </section>
-
-  <section id="dashboard">
-    <h2>Customer Dashboard</h2>
-    <p>Service history and reminders coming soon.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Dad's Garage</p>
-  </footer>
+  <script src="booking.js"></script>
 </body>
 </html>
