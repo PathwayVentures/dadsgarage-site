@@ -1,9 +1,12 @@
 
+// Handles submission of booking form to Airtable and SMS webhook
 const form = document.getElementById('service-form');
 const submitButton = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  // Disable button and show loading state
   submitButton.disabled = true;
   submitButton.textContent = 'Submitting...';
 
@@ -29,18 +32,18 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    const airtableRes = await fetch('https://api.airtable.com/v0/app08lmsUKgVOWXaO/Service%20Requests', {
+    // Send to Airtable
+    await fetch('https://api.airtable.com/v0/app08lmsUKgVOWXaO/Service%20Requests', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer pat5AlVtmzCrtQqbj.c12f4cc00e37b22c44cbb67df06d430acb44b0c36e57c7ce9',
+        'Authorization': 'Bearer pat5AlVtmzCrtQqbj.c12f4cc00e37b22c44cbb67df06d430ac9db65974b9e1cacb44b0c36e57c7ce9',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(airtablePayload)
     });
 
-    if (!airtableRes.ok) throw new Error("Airtable submission failed");
-
-    const zapierRes = await fetch('https://hooks.zapier.com/hooks/catch/22382414/uu8zjy3/', {
+    // Send SMS confirmation via Zapier webhook
+    await fetch('https://hooks.zapier.com/hooks/catch/22382414/uu8zjy3/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -49,8 +52,7 @@ form.addEventListener('submit', async (e) => {
       })
     });
 
-    if (!zapierRes.ok) throw new Error("Zapier SMS webhook failed");
-
+    // Redirect to thank you page
     window.location.href = 'thank-you.html';
 
   } catch (error) {
