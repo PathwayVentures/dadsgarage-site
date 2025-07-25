@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad's Garage | Mobile Mechanic Columbia MO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <img src="assets/logo.png" alt="Dad's Garage Logo" />
+            DAD'S GARAGE
+        </div>
+        <nav class="header-links">
+            <a href="#services">Services</a>
+            <a href="#book">Request a Quote</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <img src="assets/animated_header.gif" style="width:300px; margin-bottom:14px;" alt="Animated Header" />
+        <div class="hero-title">Mobile Mechanic Service &bull; Columbia, MO</div>
+        <div class="hero-desc">No shops. No BS. I come to you.</div>
+        <a href="#book"><button class="cta-btn">Book a Service</button></a>
+    </section>
+    <section class="section" id="services">
+        <div class="section-title">Our Services</div>
+        <div class="services-list">
+            <div class="service-card">
+                <div class="service-title">Spark Plug Job</div>
+                <img src="assets/wrench.png" alt="Spark Plug Job" style="width:90px;"><br>
+                Includes plugs, boots, dielectric grease.
+                <div style="color:#aaa; font-size:.95em;">Pro Tip: Replace boots and use dielectric grease for longer life.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Brake Job (Front/Rear)</div>
+                <img src="assets/toolbox.png" alt="Brake Job" style="width:90px;"><br>
+                Includes pads, rotors, hardware, brake cleaner, caliper grease.
+                <div style="color:#aaa; font-size:.95em;">Pro Tip: Clean all hardware, always lube caliper pins, use fresh brake cleaner.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Radiator Flush</div>
+                <img src="assets/car.png" alt="Radiator Flush" style="width:90px;"><br>
+                Includes flush, coolant, check hoses & clamps.
+                <div style="color:#aaa; font-size:.95em;">Pro Tip: Inspect all hoses, pressure test after refill.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Oil Change</div>
+                <img src="assets/wrench.png" alt="Oil Change" style="width:90px;"><br>
+                Includes oil, filter, crush washer.
+                <div style="color:#aaa; font-size:.95em;">Pro Tip: Replace crush washer every time, check for leaks.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Battery Replacement</div>
+                <img src="assets/toolbox.png" alt="Battery" style="width:90px;"><br>
+                Includes battery, terminal cleaning.
+                <div style="color:#aaa; font-size:.95em;">Pro Tip: Coat terminals with anti-corrosion spray.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Alternator/Starter</div>
+                <img src="assets/car.png" alt="Alternator" style="width:90px;"><br>
+                Includes part, labor, diagnostic.
+                <div style="color:#aaa; font-size:.95em;">Pro Tip: Always check belt tension and grounds.</div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="book">
+        <div class="section-title">Book a Service</div>
+        <form class="booking-form">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+                <option>Spark Plug Job</option>
+                <option>Brake Job (Front/Rear)</option>
+                <option>Radiator Flush</option>
+                <option>Oil Change</option>
+                <option>Battery Replacement</option>
+                <option>Alternator/Starter</option>
+            </select>
+            <label for="oil">Oil Type</label>
+            <select id="oil" name="oil">
+                <option>Conventional</option>
+                <option>Synthetic Blend</option>
+                <option>Full Synthetic</option>
+            </select>
+            <label for="filter">Filter Type</label>
+            <select id="filter" name="filter">
+                <option>Standard</option>
+                <option>Extended Life</option>
+                <option>High Performance</option>
+            </select>
+            <label for="part">Other Part Type (optional)</label>
+            <input id="part" name="part" placeholder="e.g., cabin filter, serpentine belt" />
+            <button type="submit">Request Service</button>
+        </form>
+        <div class="autozone" title="We source quality parts from local AutoZone stores.">Parts sourced from local AutoZone stores. For reference only.</div>
+    </section>
+    <section class="section">
+        <div class="section-title">Loyalty Program</div>
+        <div class="loyalty">
+            <div class="loyalty-img">
+                <img src="assets/wrench.png" alt="Loyalty" style="width:70px;">
+            </div>
+            <div class="loyalty-info">
+                <b>Get a Free Oil Change after 5 Visits!</b><br>
+                Ask about our punch card. We reward loyal customers.<br>
+                <small style="color:#aaa;">*Some restrictions apply. Ask for details on your next visit.</small>
+            </div>
+        </div>
+    </section>
+    <section class="section dashboard-mockup" id="dashboard">
+        <div class="dashboard-title">Customer Dashboard (Demo)</div>
+        <table class="dashboard-table">
+            <tr>
+                <th>Date</th>
+                <th>Service</th>
+                <th>Mileage</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>2025-07-10</td>
+                <td>Oil Change</td>
+                <td>88,500</td>
+                <td>Used full synthetic, replaced filter.</td>
+            </tr>
+            <tr>
+                <td>2025-04-13</td>
+                <td>Brake Job (Front)</td>
+                <td>84,600</td>
+                <td>Replaced rotors/pads, lubed pins.</td>
+            </tr>
+            <tr>
+                <td>2024-11-20</td>
+                <td>Battery</td>
+                <td>78,100</td>
+                <td>Cleaned terminals, anti-corrosion applied.</td>
+            </tr>
+        </table>
+        <div><b>Mileage-Based Recommendations:</b><br>
+            Next oil change: <span style="color:var(--yellow);">92,500</span><br>
+            Next brake inspection: <span style="color:var(--yellow);">95,000</span><br>
+            Battery check: <span style="color:var(--yellow);">Every 12 months</span>
+        </div>
+        <div style="margin-top:14px;">
+            <b>Service Reminders:</b> We'll remind you when it's time for regular service based on your last visit.
+        </div>
+    </section>
+    <footer style="text-align:center; color:#777; margin:48px 0 8px 0; font-size:1.05em;">
+        &copy; 2025 Dad's Garage. All Rights Reserved.
+    </footer>
+</body>
+</html>
