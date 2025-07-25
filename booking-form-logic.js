@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    await fetch('https://api.airtable.com/v0/app08lmsUKgVOWXaO/Service%20Requests', {
+    const airtableRes = await fetch('https://api.airtable.com/v0/app08lmsUKgVOWXaO/Service%20Requests', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer pat5AlVtmzCrtQqbj.c12f4cc00e37b22c44cbb67df06d430acb44b0c36e57c7ce9',
@@ -38,7 +38,9 @@ form.addEventListener('submit', async (e) => {
       body: JSON.stringify(airtablePayload)
     });
 
-    await fetch('https://hooks.zapier.com/hooks/catch/22382414/uu8zjy3/', {
+    if (!airtableRes.ok) throw new Error("Airtable submission failed");
+
+    const zapierRes = await fetch('https://hooks.zapier.com/hooks/catch/22382414/uu8zjy3/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -46,6 +48,8 @@ form.addEventListener('submit', async (e) => {
         message: `Thanks ${values.name}, your ${values.service} request was received by Dad's Garage. We'll be in touch shortly!`
       })
     });
+
+    if (!zapierRes.ok) throw new Error("Zapier SMS webhook failed");
 
     window.location.href = 'thank-you.html';
 
