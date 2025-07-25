@@ -4,41 +4,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dad's Garage</title>
+  <title>Dad's Garage - Service Booking</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Dad's Garage</h1>
-    <p>Mobile Mechanic Service — Columbia, MO</p>
-    <button onclick="document.getElementById('service-form').scrollIntoView({behavior: 'smooth'})">Book a Service</button>
   </header>
 
-  <main>
-    <section id="booking-form">
-      <h2>Service Request</h2>
-      <form id="service-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="text" name="vehicle" placeholder="Vehicle Info" required />
-        <select name="service" required>
-          <option value="">Select Service</option>
-          <option value="Spark Plug Job">Spark Plug Job</option>
-          <option value="Brake Job (Front/Rear)">Brake Job (Front/Rear)</option>
-          <option value="Radiator Flush">Radiator Flush</option>
-          <option value="Oil Change">Oil Change</option>
-          <option value="Battery Replacement">Battery Replacement</option>
-          <option value="Starter/Alternator">Starter/Alternator</option>
-        </select>
-        <input type="text" name="oil_type" placeholder="Oil Type (if needed)" />
-        <input type="text" name="part_quality" placeholder="Part Quality" />
-        <input type="datetime-local" name="datetime" placeholder="Preferred Time" />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <textarea name="notes" placeholder="Additional Notes"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
+  <section class="form-section">
+    <h2>Book a Service</h2>
+    <form id="service-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="vehicle" placeholder="Vehicle Info" required />
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="Oil Change">Oil Change</option>
+        <option value="Spark Plug Job">Spark Plug Job</option>
+        <option value="Brake Job">Brake Job</option>
+      </select>
+      <select name="oil_type">
+        <option value="">Oil Type (optional)</option>
+        <option value="Conventional">Conventional</option>
+        <option value="Synthetic">Synthetic</option>
+      </select>
+      <select name="part_quality">
+        <option value="">Part Quality</option>
+        <option value="Standard">Standard</option>
+        <option value="Premium">Premium</option>
+      </select>
+      <input type="datetime-local" name="datetime" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <textarea name="notes" placeholder="Additional Notes"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-  <script src="scripts.js"></script>
+  <script src="booking-form-logic.js"></script>
 </body>
 </html>

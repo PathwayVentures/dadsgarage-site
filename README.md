@@ -1,9 +1,14 @@
-# Dad's Garage Website
 
-This site is ready to go live.
+# Dad's Garage Booking Form (Live ZIP)
 
-## Deployment Instructions
-1. Upload the contents of this ZIP to your GitHub Pages repository.
-2. Ensure your repo has GitHub Pages enabled under Settings > Pages.
-3. Set the branch to `main` or `master` and root folder `/`.
-4. Visit your live site at `https://your-username.github.io/`.
+This bundle includes:
+
+- A working service booking form
+- Zapier + Airtable integration (already embedded)
+- Thank-you page redirect
+- CSS styling
+
+To use:
+1. Unzip and upload to GitHub Pages or any static host.
+2. Fill out the booking form and submit.
+3. Submissions go to Airtable, trigger a Zapier webhook, and redirect to a thank-you page.
