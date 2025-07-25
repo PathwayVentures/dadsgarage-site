@@ -1,5 +1,4 @@
 
-// Handles submission of booking form to Airtable and SMS webhook
 const form = document.getElementById('service-form');
 const submitButton = form.querySelector('button[type="submit"]');
 
@@ -33,7 +32,7 @@ form.addEventListener('submit', async (e) => {
     await fetch('https://api.airtable.com/v0/app08lmsUKgVOWXaO/Service%20Requests', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer pat5AlVtmzCrtQqbj.c12f4cc00e37b22c44cbb67df06d430ac9db65974b9e1cacb44b0c36e57c7ce9',
+        'Authorization': 'Bearer pat5AlVtmzCrtQqbj.c12f4cc00e37b22c44cbb67df06d430acb44b0c36e57c7ce9',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(airtablePayload)
